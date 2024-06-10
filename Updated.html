@@ -14,13 +14,14 @@
         body {
             background-color: #505c99;
             background-image: url("https://transparenttextures.com/patterns/brushed-alum.png");
+            background-attachment: fixed; /* Make the background stay fixed */
             display: flex;
             flex-direction: row;
-            justify-content: space-between;
             height: 100vh;
             margin: 0;
             padding: 0;
             font-family: 'Libre Baskerville', serif;
+            overflow: hidden; /* Prevent body from scrolling */
         }
 
         .left-column {
@@ -35,17 +36,18 @@
             align-items: center;
             height: 100vh; /* Make it span the entire height */
             box-sizing: border-box; /* Include padding in height calculation */
-            margin-left: 20px; /* Move the ribbon to the right */
+            position: fixed; /* Make the left column fixed */
+            left: 20px; /* Move the ribbon to the right */
             color: white; /* Set text color to white */
         }
 
         .right-column {
             width: 75%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
+            margin-left: 30%;
             padding: 20px;
             box-sizing: border-box;
+            overflow-y: auto; /* Enable scrolling for the right column */
+            height: 100vh;
         }
 
         h1 {
@@ -67,14 +69,14 @@
         }
 
         p {
-            font-size: 18px;
+            font-size: 16px; /* Reduce font size slightly */
         }
 
         .box {
             background-color: #ffffff;
             background-image: url("https://transparenttextures.com/patterns/cream-dust.png");
             padding: 20px;
-            margin: 20px;
+            margin: 0 0 10px 0; /* Reduce margin to bring boxes closer together */
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             color: black; /* Set text color to black */
@@ -91,6 +93,64 @@
 
         .box p {
             color: black; /* Ensure paragraphs in the box are black */
+            margin: 5px 0; /* Reduce margin for paragraphs */
+            font-size: 16px; /* Set the font size for paragraphs */
+        }
+
+        .box p.title {
+            font-weight: bold; /* Make titles bold */
+            margin-top: 15px; /* Add spacing above titles */
+        }
+
+        .box p.cert-title {
+            font-weight: bold; /* Make certifications title bold */
+            font-size: 18px; /* Make certifications title larger */
+            margin-top: 20px; /* Add bigger spacing above certifications */
+        }
+
+        .box p.exp-body {
+            font-size: 14px; /* Smaller font size for experience body */
+        }
+
+        .box p.subtitle {
+            font-size: 14px; /* Smaller font size for subtitles */
+            color: #666; /* Light grey color for subtitles */
+            font-weight: bold; /* Keep subtitles bold */
+            margin: 5px 0 10px 0; /* Add margin for subtitles */
+        }
+
+        .progress {
+            width: 100%;
+            background-color: #f0f0f0;
+            border-radius: 13px;
+            overflow: hidden;
+            margin: 5px 0; /* Reduce margin for progress bars */
+        }
+
+        .progress-bar {
+            height: 10px; /* Thinner progress bar */
+            border-radius: 13px;
+            background-color: #6a9fb5; /* Subtle blue color */
+        }
+
+        .progress-bar.sql {
+            width: 70%;
+        }
+
+        .progress-bar.tableau {
+            width: 80%;
+        }
+
+        .progress-bar.python {
+            width: 50%;
+        }
+
+        .progress-bar.data-analysis {
+            width: 80%;
+        }
+
+        .progress-bar.excel {
+            width: 90%;
         }
 
         img.profile-pic {
@@ -184,21 +244,45 @@
     <div class="right-column">
         <div class="box">
             <h2>About Me</h2>
-            <p>I work best with others, and I am very personable.
-                Working well under pressure is not difficult for me. I
-                have a positive attitude, and love learning new
-                things! I am a naturally organized and detail-oriented person. I can easily take constructive
-                criticism and own responsibility.</p>
+            <p>I am a dedicated enthusiastic aspiring data analyst with a strong passion for uncovering insights through data. Although I am at the beginning of my career, I am committed to continuous learning and professional development. I have a solid foundation in statistical analysis, data visualization, and data manipulation gained through coursework and personal projects. I am eager to apply my skills in a professional setting. My analytical mindset, attention to detail, and problem-solving abilities drive me to deliver high-quality work. I am excited about the opportunity to contribute to a dynamic team and grow my expertise in data analysis.</p>
         </div>
 
         <div class="box">
             <h2>Skills</h2>
-            <p>Here you can list your skills...</p>
+            <p>SQL</p>
+            <div class="progress">
+                <div class="progress-bar sql"></div>
+            </div>
+            <p>Tableau</p>
+            <div class="progress">
+                <div class="progress-bar tableau"></div>
+            </div>
+            <p>Python</p>
+            <div class="progress">
+                <div class="progress-bar python"></div>
+            </div>
+            <p>Data Analysis</p>
+            <div class="progress">
+                <div class="progress-bar data-analysis"></div>
+            </div>
+            <p>Excel</p>
+            <div class="progress">
+                <div class="progress-bar excel"></div>
+            </div>
         </div>
 
         <div class="box">
             <h2>Experience</h2>
-            <p>Here you can list your experience...</p>
+            <p class="title"><br>IT Specialist</p>
+            <p class="subtitle">Lumio Solar | May 2022 – Present</p>
+            <p class="exp-body">Provided technical support and resolved IT-related issues. Gained a new type of organizational skills, working quickly and efficiently to keep up with the workloads. Due to the team knowing I'm interested in data, all things related to data got pushed in my direction. I collaborated with various departments to understand their data needs and provided tailored IT solutions. I gained a new appreciation for data after leading several side projects focusing on data analysis to improve operational efficiency: Analyzed customer support data to identify trends and improve response times, resulting in a significant increase in customer satisfaction.</p>
+            <p class="title"><br>Data Analysis Projects</p>
+            <p class="subtitle">Self-Initiated | Ongoing</p>
+            <p class="exp-body">Regularly work on personal data projects to enhance analytical skills and stay updated with industry trends. I learned to get out of my comfort zone to teach myself and utilize the resources available to me to figure out solutions to problems. I self-taught Python, most of Excel for data cleaning, and most data visualizations.</p>
+            <p class="cert-title"><br>Certifications</p>
+            <p class="title"><br>Google Data Analytics Professional Certificate</p>
+            <p class="subtitle">Coursera | Completed January 2023</p>
+            <p class="exp-body">Gained proficiency in data analysis tools and techniques, including SQL, R, and data visualization. Developed a strong foundation in data cleaning, data visualization, and data-driven decision-making. Completed hands-on projects, reinforcing practical skills and knowledge in data analytics.</p>
         </div>
 
         <div class="box">
