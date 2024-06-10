@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
+        .center {
+            text-align: center;
+            color: red;
+        }
+
+        body {
+            background-color: #505c99;
+            background-image: url("https://transparenttextures.com/patterns/brushed-alum.png");
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            font-family: 'Libre Baskerville', serif;
+        }
+
+        .left-column {
+            background-color: #1b1b33;
+            background-image: url("https://transparenttextures.com/patterns/concrete-wall.png");
+            padding: 20px;
+            width: 25%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            height: 100vh; /* Make it span the entire height */
+            box-sizing: border-box; /* Include padding in height calculation */
+            margin-left: 20px; /* Move the ribbon to the right */
+            color: white; /* Set text color to white */
+        }
+
+        .right-column {
+            width: 75%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            margin: 0;
+            padding-bottom: 5px;
+            color: white; /* Set text color to white */
+            text-align: center;
+            border-bottom: 1px solid #ccc;
+            width: 100%;
+        }
+
+        h3.subtitle {
+            margin: 0;
+            padding-top: 5px;
+            color: white; /* Set text color to white */
+            text-align: center;
+            font-weight: normal;
+            font-size: 1.2em;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        .box {
+            background-color: #ffffff;
+            background-image: url("https://transparenttextures.com/patterns/cream-dust.png");
+            padding: 20px;
+            margin: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            color: black; /* Set text color to black */
+        }
+
+        .box h2 {
+            margin: 0;
+            padding-bottom: 10px;
+            color: black; /* Set text color to black */
+            text-align: center;
+            border-bottom: 1px solid #ccc;
+            width: 100%;
+        }
+
+        .box p {
+            color: black; /* Ensure paragraphs in the box are black */
+        }
+
+        img.profile-pic {
+            margin-top: 20px;
+            border-radius: 10px;
+            width: 80%;
+            height: auto;
+        }
+
+        .links {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .links a {
+            display: inline-block;
+            margin: 10px;
+            vertical-align: middle;
+        }
+
+        .links img {
+            width: 48px;
+            height: 48px;
+        }
+
+        .links .github-logo {
+            width: 34px; /* Adjust the size for GitHub logo */
+            height: 34px;
+        }
+
+        .links .tableau-logo {
+            width: 34px;
+            height: 34px;
+            margin-top: 7px;
+        }
+
+        .contact {
+            margin-top: 20px;
+            text-align: center;
+            font-family: 'Libre Baskerville', serif;
+        }
+
+        .contact p {
+            margin: 5px 0;
+        }
+
+        .contact .contact-title {
+            font-size: 25px;
+            color: white; /* Set text color to white */
+        }
+
+        .contact .small-text {
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white; /* Set text color to white */
+        }
+
+        .contact .small-text i {
+            margin-right: 10px;
+        }
+    </style>
+    <title>About Brooklyn</title>
+</head>
+
+<body>
+
+    <div class="left-column">
+        <h1>Brooklyn Midzinski</h1>
+        <img src="Edited.png" alt="Profile Photo" class="profile-pic">
+        <h3 class="subtitle">Data Analyst</h3>
+        <div class="contact">
+            <p class="contact-title">Contact:</p>
+            <p class="small-text"><i class="fas fa-envelope"></i>bm@gmail.com</p>
+            <p class="small-text"><i class="fas fa-phone"></i>(801) 777 7777</p>
+        </div>
+        <div class="links">
+            <a href="https://github.com/BrooklynMidzinski" target="_blank">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCbmLVIGyVVDqk_7ey7S1UbliLmqOHVMXJJA&s" alt="GitHub" class="github-logo">
+            </a>
+            <a href="https://www.linkedin.com/in/brooklyn-midzinski-821a19222/" target="_blank">
+                <img src="https://www.shareicon.net/data/2017/06/30/888065_logo_512x512.png" alt="LinkedIn">
+            </a>
+            <a href="https://public.tableau.com/app/profile/brooklyn.midzinski5269/vizzes" target="_blank">
+                <img src="https://public.tableau.com/favicon.ico" alt="Tableau" class="tableau-logo">
+            </a>
+        </div>
+    </div>
+
+    <div class="right-column">
+        <div class="box">
+            <h2>About Me</h2>
+            <p>I work best with others, and I am very personable.
+                Working well under pressure is not difficult for me. I
+                have a positive attitude, and love learning new
+                things! I am a naturally organized and detail-oriented person. I can easily take constructive
+                criticism and own responsibility.</p>
+        </div>
+
+        <div class="box">
+            <h2>Skills</h2>
+            <p>Here you can list your skills...</p>
+        </div>
+
+        <div class="box">
+            <h2>Experience</h2>
+            <p>Here you can list your experience...</p>
+        </div>
+
+        <div class="box">
+            <h2>References</h2>
+            <p>Here you can list your references...</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
